@@ -30,6 +30,8 @@ public class ExemploFind {
         tx2.begin();
         
         Pessoa pessoaPersistida = em2.find(Pessoa.class, pessoa.getId());
+        System.out.println("Buscando pelo Id ");
+        System.out.println(pessoaPersistida.toString());
         pessoaPersistida.setNome("Douglas Eleutério");
         
         System.out.println("Antes commit");

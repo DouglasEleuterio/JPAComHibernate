@@ -22,7 +22,7 @@ public class ExemploMerge {
         EntityManager em1 = EntityManagerUtil.em();
         EntityTransaction tx1 = em1.getTransaction();
         
-        //Metodo de persistenci Iniciado, inserção do objeto através do PersistenceContex e posteriormente fechado o EntityManager e matando o PersistenceContext.
+        //Metodo de persistencia Iniciado, inserção do objeto através do PersistenceContex e posteriormente fechado o EntityManager e matando o PersistenceContext.
         tx1.begin();
         em1.persist(pessoa);
         tx1.commit();

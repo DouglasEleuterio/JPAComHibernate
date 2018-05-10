@@ -17,10 +17,16 @@ import javax.persistence.Id;
 @Entity
 public class Pessoa {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String nome;
+
+//    constructor
+
+
+    public Pessoa() {
+    }
 
     public Pessoa(String nome) {
         this.nome = nome;
@@ -40,5 +46,12 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa \n " +
+                "id= " + id +
+                ", nome= '" + nome ;
     }
 }
